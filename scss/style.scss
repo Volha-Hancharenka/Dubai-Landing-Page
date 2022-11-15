@@ -1,0 +1,69 @@
+@import "./config/fonts";
+@import "./config/variables";
+@import "./config/functions";
+@import "./config/mixins";
+@import "./config/reset";
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(1fr, 345px) minmax(1fr, 1110px) minmax(1fr, 345px);
+  grid-column: 2/5;
+  grid-area: header;
+
+  &__menu {
+    //display: grid;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &__logo {
+  }
+}
+.logo {
+  display: flex;
+  justify-content: center;
+
+  &__icon {
+    // position: absolute;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    //  position: relative;
+    //align-items: center;
+  }
+  &__big-text {
+    font-family: Gilroy;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 35px;
+  }
+  &__small-text {
+    font-family: Work Sans;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13px;
+  }
+}
+.menu {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(1fr, 92px)) 1fr minmax(1fr, 165px);
+  &__link {
+    color: #fff;
+  
+  }
+  &__btn {
+  }
+}
+.body {
+  grid-column: 2/5;
+  grid-area: body;
+}
+.footer {
+  grid-column: 2/5;
+  grid-area: footer;
+}
