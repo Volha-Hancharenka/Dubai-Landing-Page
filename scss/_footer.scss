@@ -1,10 +1,15 @@
 .footer {
   //grid-column: 2/5;
   grid-area: footer;
-  grid-row: 3;
+  grid-template-columns:  repeat(3)/ 1fr minmax(auto, 1800px) 1fr;
+  //grid-row: 3/4;
 
 
   &__logo {
+    display: grid;
+//grid-template-columns: 1fr;
+justify-items: center;
+grid-column: 2/3;
   }
 
   &__icon {
@@ -20,6 +25,9 @@
   }
 
   &__content {
+    display: grid;
+    grid-column: 2/3;
+    grid-template-columns: repeat(5, minmax(auto,347px));
   }
 
   &__info {
