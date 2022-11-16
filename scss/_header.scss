@@ -1,6 +1,6 @@
 .header {
   display: grid;
-  grid-template-columns: 1fr/ 1fr minmax(auto, 345px) minmax(auto, 1110px) minmax(auto, 345px) 1fr;
+  grid-template: 1fr/1fr minmax(auto, 345px) minmax(auto, 1110px) minmax(auto, 345px) 1fr;
   grid-area: header;
   padding: 24px 0;
   //grid-row: 1/2;

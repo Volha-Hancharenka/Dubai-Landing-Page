@@ -1,15 +1,18 @@
 .footer {
   //grid-column: 2/5;
   grid-area: footer;
-  grid-template-columns:  repeat(3)/ 1fr minmax(auto, 1800px) 1fr;
-  //grid-row: 3/4;
-
+  grid-template: minmax(63px, 1fr) 1fr minmax(63px, 1fr) / 1fr;
+  grid-template-areas:
+    "logo"
+    "item"
+    "copy";
 
   &__logo {
     display: grid;
-//grid-template-columns: 1fr;
-justify-items: center;
-grid-column: 2/3;
+    //grid-template-columns: 1fr;
+    justify-items: center;
+    grid-column: 2/3;
+    grid-area: logo;
   }
 
   &__icon {
@@ -26,18 +29,20 @@ grid-column: 2/3;
 
   &__content {
     display: grid;
-    grid-column: 2/3;
-    grid-template-columns: repeat(5, minmax(auto,347px));
+    grid-area: item;
+    grid-template-columns: 1fr repeat(5, minmax(auto, 347px)) 1fr;
+    //grid-column: 2/3;
   }
 
   &__info {
+   
   }
 
   &__list {
+    grid-column: 2/3;
   }
 
   &__item {
-
     &_first {
     }
   }
@@ -49,6 +54,7 @@ grid-column: 2/3;
   }
 
   &__footer {
+    grid-area: footer;
   }
 
   &__copy {
@@ -70,7 +76,6 @@ grid-column: 2/3;
 .btn {
 }
 .social-icon {
-
   &__icon {
   }
 }
