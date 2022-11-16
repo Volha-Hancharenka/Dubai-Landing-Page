@@ -1,0 +1,143 @@
+.header {
+  display: grid;
+  grid-template-columns: 1fr/ 1fr minmax(auto, 345px) minmax(auto, 1110px) minmax(auto, 345px) 1fr;
+  grid-area: header;
+  padding: 24px 0;
+  grid-row: 1;
+
+  &__menu {
+    //align-items: center;
+    //display: grid;
+  }
+
+  &__info {
+    grid-column: 4/5;
+  }
+
+  &__logo {
+    grid-column: 2/3;
+    //display: grid;
+    //
+  }
+}
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-areas:
+    "none"
+    "lang"
+    "number";
+
+  &__lang {
+    grid-area: lang;
+    grid-column: 2/3;
+    display: flex;
+    gap: 8px;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: #929292;
+    transition: all 0.3s ease;
+
+    line-height: 17px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fcd54c;
+    }
+  }
+
+  &__phone {
+    grid-area: phone;
+    grid-column: 3/4;
+    color: #fff;
+    transition: all 0.3s ease;
+
+    font-size: 16px;
+
+    line-height: 19px;
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fcd54c;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  //align-items: center;
+  &__big-text {
+    font-size: 28px;
+    line-height: 35px;
+  }
+  &__small-text {
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
+.logo-icon {
+  // position: absolute;
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: #fff;
+  transition: all 0.3s ease;
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fcd54c;
+  }
+  //  position: relative;
+  //align-items: center;
+}
+.logo-big {
+  font-weight: 700;
+}
+.logo-small {
+  font-family: "Work Sans", sans-serif;
+
+  font-weight: 400;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.menu {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column: 3/4;
+
+  //grid-template-columns: repeat(4, minmax(1fr, 92px)) 1fr minmax(1fr, 165px);
+  &__list {
+    display: grid;
+    justify-items: start;
+    grid-auto-flow: column;
+  }
+  &__item {
+  }
+  &__link {
+    color: #fff;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fcd54c;
+    }
+  }
+  &__btn {
+    justify-items: end;
+    line-height: 16px;
+  }
+}
+.btn {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  color: #000;
+  padding: 12px 14px;
+  background-color: #fcd54c;
+}
