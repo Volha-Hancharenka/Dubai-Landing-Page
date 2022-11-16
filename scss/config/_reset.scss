@@ -80,7 +80,7 @@ h6 {
   min-height: 100%;
   overflow: hidden;
   display: grid;
-  grid-template: 3fr / 1fr minmax(1fr, 345px) minmax(1fr, 1110px) minmax(1fr, 345px) 1fr;
+  grid-template: minmax(63px, 1fr) 1fr minmax(650px ,1fr)/ 1fr;
   grid-template-areas:
     "header"
     "body"
