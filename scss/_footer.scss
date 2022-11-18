@@ -45,15 +45,20 @@
   &__info {
     //display: grid;
     //gap: 50px;
+    display: grid;
+    grid-auto-flow: column;
   }
 
   &__list {
     grid-column: 2/3;
     display: grid;
     gap: 20px;
+    
+    
   }
 
   &__item {
+    
     //gap: 50px;
    
     &_first {
@@ -72,6 +77,10 @@
     font-size: 18px;
     font-weight: 300;
     line-height: 21px;
+    transition: all 0.3s ease;
+    &:hover, &:focus, &:active {
+     color: #fcd54c;
+    }
   }
 
   &__btn {
@@ -80,6 +89,8 @@
   &__footer {
     grid-area: footer;
    margin: 30px 0;
+   display: flex;
+   justify-content: space-between;
    
   }
 
@@ -109,6 +120,25 @@ line-height: 29px;
 .btn {
 }
 .social-icon {
+  display: flex;
+  gap: 30px;
   &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center  ;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    &:hover, &:focus {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+    & svg {
+      width: 20px;
+      height: 20px;
+      path {
+        fill: #fff;
+      }
+    }
   }
 }
