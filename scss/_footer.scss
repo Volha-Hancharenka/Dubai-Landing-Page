@@ -1,18 +1,23 @@
 .footer {
+  margin-top: 122px;
+  border-top: 1px solid rgba(255, 255, 255, 0.302);
   //grid-column: 2/5;
   grid-area: footer;
-  grid-template: minmax(63px, 1fr) 1fr minmax(63px, 1fr) / 1fr;
+  grid-template: minmax(1fr, auto) 1fr minmax(1fr, auto) / 1fr;
   grid-template-areas:
     "logo"
     "item"
     "copy";
 
   &__logo {
-    display: grid;
-    //grid-template-columns: 1fr;
-    justify-items: center;
-    grid-column: 2/3;
-    grid-area: logo;
+    padding-top: 70px;
+    align-items: center;
+    margin-bottom: 50px;
+    //display: grid;
+    //justify-items: center;
+    justify-content: center;
+    //grid-column: 2/3;
+    //grid-area: logo;
   }
 
   &__icon {
@@ -28,26 +33,45 @@
   }
 
   &__content {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.302);
+    padding-bottom: 95px;
     display: grid;
     grid-area: item;
-    grid-template-columns: 1fr repeat(5, minmax(auto, 347px)) 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 347px));
     //grid-column: 2/3;
+    // justify-content: space-between;
   }
 
   &__info {
-   
+    //display: grid;
+    //gap: 50px;
   }
 
   &__list {
     grid-column: 2/3;
+    display: grid;
+    gap: 20px;
   }
 
   &__item {
+    //gap: 50px;
+   
     &_first {
+      margin-bottom: 20px;
+      font-family: "Work Sans", sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 21px;
+      color: #E8E8E8;
     }
   }
 
   &__link {
+    color: #E8E8E8;
+    font-family: "Work Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21px;
   }
 
   &__btn {
@@ -55,9 +79,18 @@
 
   &__footer {
     grid-area: footer;
+   margin: 30px 0;
+   
   }
 
   &__copy {
+    //padding: 30px 0;
+    font-family: 'Lexend', sans-serif;
+font-size: 18px;
+font-weight: 300;
+line-height: 29px;
+
+   
   }
 
   &__social {

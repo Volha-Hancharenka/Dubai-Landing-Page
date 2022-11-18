@@ -80,7 +80,11 @@ h6 {
   min-height: 100%;
   overflow: hidden;
   display: grid;
-  grid-template: minmax(63px, auto) 1fr minmax(650px ,auto)/ 1fr;
+  padding-right: 60px;
+  padding-left: 60px;
+  @include adaptiveClamp("padding-right", 60, 38, 1200, 768, 1);
+  @include adaptiveClamp("padding-left", 60, 38, 1200, 768, 1);
+  grid-template: minmax(63px, auto) 1fr minmax(650px, auto) / 1fr;
   grid-template-areas:
     "header"
     "body"

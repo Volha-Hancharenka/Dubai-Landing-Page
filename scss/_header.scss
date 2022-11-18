@@ -1,37 +1,41 @@
 .header {
   display: grid;
-  grid-template: 1fr/1fr minmax(auto, 345px) minmax(auto, 1110px) minmax(auto, 345px) 1fr;
+  grid-template: 1fr / minmax(150px, 345px) minmax(auto, 1110px) minmax(auto, 345px);
   grid-area: header;
   padding: 24px 0;
+  align-items: center;
   //grid-row: 1/2;
 
   &__menu {
-    //align-items: center;
+    align-items: center;
     //display: grid;
   }
 
   &__info {
-    grid-column: 4/5;
+    grid-column: 3/4;
   }
 
   &__logo {
-    grid-column: 2/3;
+    grid-column: 1/2;
+    align-items: center;
     //display: grid;
     //
   }
 }
 .info {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
-  grid-template-areas:
-    "none"
-    "lang"
-    "number";
+  grid-template-columns: minmax(auto, 1fr) 1fr minmax(2fr, auto);
+  align-items: center;
+  @media (max-width: 1350px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
   &__lang {
-    grid-area: lang;
     grid-column: 2/3;
     display: flex;
+
     gap: 8px;
   }
 
@@ -50,8 +54,8 @@
   }
 
   &__phone {
-    grid-area: phone;
     grid-column: 3/4;
+    align-items: center;
     color: #fff;
     transition: all 0.3s ease;
 
@@ -63,25 +67,29 @@
     &:active {
       color: #fcd54c;
     }
+    @media (max-width: 1050px) {
+      display: none;
+      &:after {
+        content: "\2706";
+      }
+    }
   }
 }
 
 .logo {
+  position: relative;
   display: flex;
   //align-items: center;
-  &__big-text {
-    font-size: 28px;
-    line-height: 35px;
-  }
-  &__small-text {
-    font-size: 11px;
-    line-height: 13px;
-  }
 }
+
+
+
 .logo-icon {
-  // position: absolute;
+  //position: absolute;
+ 
 }
 .logo-text {
+  margin-left: -25px;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -96,26 +104,31 @@
   //align-items: center;
 }
 .logo-big {
+  margin-top: -7px;
+
   font-weight: 700;
+  font-size: 28px;
+  line-height: 35px;
 }
 .logo-small {
   font-family: "Work Sans", sans-serif;
-
   font-weight: 400;
-
   color: rgba(255, 255, 255, 0.6);
+  font-size: 11px;
+  line-height: 13px;
 }
 
 .menu {
   display: grid;
   grid-auto-flow: column;
-  grid-column: 3/4;
+  grid-column: 2/3;
 
-  //grid-template-columns: repeat(4, minmax(1fr, 92px)) 1fr minmax(1fr, 165px);
+  grid-template-columns: minmax(280px, 380px) minmax(0, 622px) minmax(100px, 165px);
   &__list {
     display: grid;
     justify-items: start;
     grid-auto-flow: column;
+    grid-column: 1/2;
   }
   &__item {
   }
@@ -132,6 +145,7 @@
   &__btn {
     justify-items: end;
     line-height: 16px;
+    grid-column: 3/4;
   }
 }
 .btn {
