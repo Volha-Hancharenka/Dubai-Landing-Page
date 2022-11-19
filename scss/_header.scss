@@ -24,9 +24,9 @@
 }
 .info {
   display: grid;
-  grid-template-columns: minmax(auto, 1fr) 1fr minmax(2fr, auto);
+  grid-template-columns: minmax(0, 1fr) 1fr minmax(2fr, auto);
   align-items: center;
- justify-items: end;
+  justify-items: end;
   @media (max-width: 1350px) {
     display: flex;
     flex-direction: column;
@@ -38,14 +38,15 @@
     flex-direction: row;
     align-items: center;
     gap: 8px;
-   }
+    margin-left: -50px;
+  }
 
   &__lang {
     grid-column: 2/3;
     display: flex;
     gap: 8px;
     @media (max-width: 1350px) {
-     justify-items: end;
+      justify-items: end;
     }
   }
 
@@ -78,29 +79,31 @@
       color: #fcd54c;
     }
     @media (max-width: 1000px) {
-     display: none;
+      display: none;
     }
     &_icon {
       @media (min-width: 1001px) {
         display: none;
-       }
-       width: 40px;
-       height: 40px;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       border-radius: 50%;
-       transition: all 0.3s ease;
-       &:hover, &:focus, &:active {
+      }
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      &:hover,
+      &:focus,
+      &:active {
         background-color: rgba(255, 255, 255, 0.3);
-       }
-       & svg {
+      }
+      & svg {
         width: 20px;
         height: 20px;
         path {
           fill: #fff;
         }
-       }
+      }
     }
   }
 }
@@ -148,8 +151,8 @@
   display: grid;
   grid-auto-flow: column;
   grid-column: 2/3;
-  grid-template-columns: minmax(280px, 380px) minmax(0, 622px) minmax(100px, 165px);
- 
+  grid-template-columns: minmax(180px, 380px) minmax(0, 622px) minmax(100px, 165px);
+
   &__list {
     display: grid;
     justify-items: start;
@@ -157,8 +160,8 @@
     grid-column: 1/2;
     @media (max-width: 1000px) {
       justify-items: end;
-     
-      }
+      gap: 10px;
+    }
   }
   &__item {
   }
@@ -176,6 +179,7 @@
     justify-items: end;
     line-height: 16px;
     grid-column: 3/5;
+    margin-left: 30px;
   }
 }
 .btn {
