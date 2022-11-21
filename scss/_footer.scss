@@ -83,7 +83,7 @@
         position: absolute;
         width: 10px;
         height: 1px;
-        top: 15px;
+        top: 12px;
         left: 50%;
         display: block;
         background-color: #929292;
@@ -95,7 +95,7 @@
         width: 10px;
         height: 1px;
         left: 50%;
-        top: 8px;
+        top: 12px;
         background-color: #929292;
         transform: rotate(45deg) translateX(-50%);
       }
@@ -206,7 +206,7 @@
 .btn {
 }
 .social-icon {
-  &__icon {
+  &__link {
     display: flex;
     justify-content: center;
     align-items: center;
