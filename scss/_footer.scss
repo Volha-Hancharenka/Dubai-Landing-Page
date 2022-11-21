@@ -55,7 +55,9 @@
    
     
     @media (max-width: 768px) {
-      
+      display: flex;
+      align-items: сenter ;
+      justify-content: space-between;
       padding: 15px 0;
       border-bottom: 1px solid #3a3a3a;
       margin-bottom: 0;
@@ -75,16 +77,13 @@
     }
     &_icon {
       @media (max-width: 768px) {
-        position: absolute;
-    
-        
+        position: relative;
         &:after {
           content: "";
           position: absolute;
           width: 9px;
           height: 1px;
           display: block;
-         
           top: 50%;
           background-color: #929292;
           transform: rotate(-45deg);
