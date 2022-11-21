@@ -8,7 +8,7 @@
 .home {
   //grid-column: 1/2;
   display: grid;
-  grid-template: repeat(6, minmax(auto, 150px)) / repeat(5, minmax(auto, 360px));
+  grid-template: repeat(6, minmax(auto, 162px)) / repeat(5, minmax(auto, 360px));
   background: url(../images/home-bg.png) no-repeat 100% 0 / cover;
 
   &__title {
@@ -16,13 +16,12 @@
     grid-column: 2/4;
     grid-row: 3/5;
   }
-  &__item {
+  &__content {
     text-align: center;
     font-family: "Work Sans", sans-serif;
     font-size: 16px;
     font-weight: 600;
     line-height: 26px;
-
     &_num {
       font-family: "Gilroy", sans-serif;
       font-size: 60px;
@@ -64,8 +63,14 @@
       color: rgba(255, 255, 255, 0.6);
       margin-left: 26px;
     }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
 
-    &_one {
+    &_navigation {
       // display: grid;
       grid-column: 2/3;
       grid-row: 6;
@@ -74,30 +79,33 @@
       justify-content: center;
     }
     &_two {
-      //display: grid;
       grid-column: 3/4;
       grid-row: 6/7;
+      background-color: #272727;
     }
     &_three {
-      //display: grid;
       grid-column: 4/5;
-      grid-row: 6;
+      grid-row: 6/7;
+      background-color: #272727;
     }
     &_four {
-      //display: grid;
-      grid-column: 5;
-      grid-row: 6;
-    }
-    &_two,
-    &_three,
-    &_four {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 25px;
+      grid-column: 5/6;
+      grid-row: 6/7;
       background-color: #272727;
     }
   }
+  &__social {
+  }
+}
+.social-icon__home {
+  display: flex;
+  flex-direction: column;
+  grid-column: 5/6;
+  grid-row: 1/3;
+  align-items: end;
+  margin-right: 20px;
+  margin-top: 40px;
+  gap: 20px;
 }
 .title {
   // display: grid;
@@ -110,7 +118,7 @@
   position: relative;
   &__border {
     position: absolute;
-    top: -20%;
+    top: -18%;
     left: -5%;
   }
   &__up {
