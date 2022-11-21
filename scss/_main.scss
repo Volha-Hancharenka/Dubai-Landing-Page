@@ -6,18 +6,20 @@
 }
 
 .home {
-  grid-template: repeat(3, minmax(auto, 383px)) / 1fr repeat(5, minmax(auto, 363px)) 1fr;
-  background: url(../images/home-bg.png) no-repeat 100% 0/cover;
+  grid-template: repeat(6, minmax(150px, auto)) / repeat(5, minmax(360px, auto));
+  //background: url(../images/home-bg.png) no-repeat 100% 0/cover;
 
   
 
   &__title {
     display: grid;
-    grid-column: 3/5;
-    grid-row: 2/3;
+    grid-column: 2/4;
+    grid-row: 3/5;
   }
 
   &__content {
+    grid-column: 2/6;
+    grid-row: 6/7;
   }
 
   &__items {
