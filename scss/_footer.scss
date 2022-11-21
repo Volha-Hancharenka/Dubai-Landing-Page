@@ -52,11 +52,10 @@
   &__info-title {
     margin-bottom: 20px;
     position: relative;
-   
-    
+
     @media (max-width: 768px) {
       display: flex;
-      align-items: сenter ;
+      align-items: сenter;
       justify-content: space-between;
       padding: 15px 0;
       border-bottom: 1px solid #3a3a3a;
@@ -66,39 +65,40 @@
         padding-bottom: 19px;
       }
     }
+  }
 
-    &_text {
-      //margin-bottom: 20px;
-      font-family: "Work Sans", sans-serif;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 21px;
-      color: #e8e8e8;
-    }
-    &_icon {
-      @media (max-width: 768px) {
-        position: relative;
-        &:after {
-          content: "";
-          position: absolute;
-          width: 9px;
-          height: 1px;
-          display: block;
-          top: 50%;
-          background-color: #929292;
-          transform: rotate(-45deg);
-        }
-        &::before {
-          content: "";
-          position: absolute;
-          width: 9px;
-          height: 1px;
-          display: block;
-          //left: 0;
-          top: 50%;
-          background-color: #929292;
-          transform: rotate(45deg);
-        }
+  &__info-text {
+    //margin-bottom: 20px;
+    font-family: "Work Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    color: #e8e8e8;
+  }
+  &__info-icon {
+    @media (max-width: 768px) {
+      position: relative;
+      transform: rotate(90deg);
+      &:after {
+        content: "";
+        position: absolute;
+        width: 9px;
+        height: 1px;
+        display: block;
+        top: 50px;
+        background-color: #929292;
+        transform: rotate(-45deg);
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 9px;
+        height: 1px;
+        display: block;
+
+        top: 44px;
+        background-color: #929292;
+        transform: rotate(45deg);
       }
     }
   }
@@ -112,6 +112,7 @@
       gap: 0;
       &_last {
         display: block;
+        position: relative;
         li {
           margin-bottom: 13px;
         }
@@ -137,6 +138,14 @@
   }
 
   &__btn {
+    @media (max-width: 768px) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+    @media (max-width: 600px) {
+      position: static;
+    }
   }
 
   &__footer {
