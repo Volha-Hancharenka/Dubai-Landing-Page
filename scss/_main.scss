@@ -7,7 +7,7 @@
 
 .home {
   grid-template: repeat(6, minmax(auto, 150px)) / repeat(5, minmax(auto, 360px));
-  background: url(../images/home-bg.png) no-repeat 100% 0/cover;
+  background: url(../images/home-bg.png) no-repeat 100% 0 / cover;
 
   &__title {
     display: grid;
@@ -22,7 +22,7 @@
   }
 
   &__item-one {
-   // display: grid;
+    // display: grid;
     grid-column: 2/3;
     grid-row: 6;
   }
@@ -30,7 +30,6 @@
     //display: grid;
     grid-column: 3/4;
     grid-row: 6;
-   
   }
   &__item-three {
     //display: grid;
@@ -41,15 +40,16 @@
     //display: grid;
     grid-column: 5;
     grid-row: 6;
-   
   }
- &__item-two, &__item-three, &__item-four {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  background-color: #272727;
-}
+  &__item-two,
+  &__item-three,
+  &__item-four {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background-color: #272727;
+  }
   &__item {
     text-align: center;
     font-family: "Work Sans", sans-serif;
@@ -64,26 +64,28 @@
       line-height: 24px;
     }
     &_num-first {
-      color:#fcd54c;
+      color: #fcd54c;
     }
 
-    &_prev, &_next {
+    &_prev,
+    &_next {
       font-size: 30px;
       font-weight: 500;
       text-transform: uppercase;
       transition: all 0.3s ease;
-      &:hover, &:focus, &:active {
-        color:#fcd54c;
-
+      &:hover,
+      &:focus,
+      &:active {
+        color: #fcd54c;
       }
     }
-    &_prev{
+    &_prev {
       color: #fff;
       position: relative;
       &::after {
-        content: '';
+        content: "";
         position: absolute;
-       
+
         width: 20px;
         height: 1px;
         background-color: #fff;
@@ -99,15 +101,37 @@
   }
 }
 .title {
-  display: grid;
+ // display: grid;
   grid-column: 2/4;
   grid-row: 3/5;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  position: relative;
+  &__border {
+    position: absolute;
+  }
   &__up {
+    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
   }
 
   &__center {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 100px;
+    span {
+      color: #fcd54c;
+    }
   }
 
   &__down {
+    font-family: "Work Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
   }
 }
