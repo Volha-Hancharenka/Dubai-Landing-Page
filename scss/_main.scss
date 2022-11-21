@@ -2,10 +2,12 @@
   //grid-column: 2/5;
   grid-area: body;
   //grid-row: 2/3;
-  // grid-template-columns: 1fr/ 1fr minmax(auto, 1800px) 1fr;
+  // grid-template: minmax(auto, 990px) 1fr 1fr/ 1fr ;
 }
 
 .home {
+  //grid-column: 1/2;
+  display: grid;
   grid-template: repeat(6, minmax(auto, 150px)) / repeat(5, minmax(auto, 360px));
   background: url(../images/home-bg.png) no-repeat 100% 0 / cover;
 
