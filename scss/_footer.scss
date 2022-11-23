@@ -15,6 +15,11 @@
     @media (max-width: 768px) {
       margin-bottom: 12px;
     }
+    @media (max-width: 500px) {
+     justify-content: flex-start;
+     margin-bottom: 25px;
+     padding-top: 40px;
+    }
   }
 
   &__icon {
@@ -57,6 +62,9 @@
       padding: 15px 0;
       border-bottom: 1px solid #3a3a3a;
       margin-bottom: 0;
+      @media (max-width: 500px) {
+        border-bottom: none;
+      }
       &_last {
         border-bottom: none;
         padding-bottom: 19px;
@@ -187,12 +195,7 @@
 
 .info-end {
 }
-/*.info-center {
-  @media (min-width: 1510px) {
-    display: grid;
-    justify-items: center;
-  }
-}*/
+
 .logo {
 }
 .logo-icon {

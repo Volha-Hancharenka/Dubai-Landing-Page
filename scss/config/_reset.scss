@@ -91,6 +91,10 @@ h6 {
     "footer";
   background-color: #272727;
   color: #fff;
+  @media (max-width: 760px) {
+    @include adaptiveClamp("padding-right", 38, 16, 767, 320, 1);
+    @include adaptiveClamp("padding-left", 38, 16, 767, 320, 1);
+  }
 }
 
 /*[class*="__container"] {
